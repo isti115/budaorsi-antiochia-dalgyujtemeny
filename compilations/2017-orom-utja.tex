@@ -1,0 +1,56 @@
+\documentclass[a5paper,twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[hungarian]{babel}
+
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\usepackage[chorded]{songs}
+% \usepackage[lyric]{songs}
+% \usepackage[slides]{songs}
+
+\title{2017 - Öröm Útja}
+% \author{Donkó István}
+\date{2017. április 17.}
+
+\setlength{\topmargin}{-1.5cm}
+
+\setlength{\headheight}{0cm}
+\setlength{\headsep}{0cm}
+
+\setlength{\oddsidemargin}{-2cm}
+\setlength{\evensidemargin}{-1.3cm}
+
+\setlength{\textwidth}{13cm}
+\setlength{\textheight}{18cm}
+
+\setlength{\songnumwidth}{1cm}
+\setlength{\versenumwidth}{0.5cm}
+% \setlength{\cbarwidth}{0.1cm}
+
+\songcolumns{1}
+
+\begin{document}
+
+  \begin{titlepage}
+    \pagenumbering{gobble}
+    \setlength{\oddsidemargin}{-1.5cm}
+    \vspace*{6cm}
+    {\let\newpage\relax\maketitle}
+  \end{titlepage}
+
+  \pagenumbering{arabic}
+
+  \versesep=12pt plus 3pt minus 5pt
+
+  \begin{songs}{}
+    \input{songs/ebredj-ember.tex}
+    \input{songs/im-itt-jon-o.tex}
+    \input{songs/koszonom-jezus.tex}
+    \input{songs/minden-mi-el.tex}
+    % \input{"../songs/"}
+    \input{songs/foltamadt-alleluja.tex}
+  \end{songs}
+\end{document}
