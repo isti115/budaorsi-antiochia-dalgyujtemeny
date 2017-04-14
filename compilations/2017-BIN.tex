@@ -1,0 +1,83 @@
+\documentclass[a5paper,twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[hungarian]{babel}
+
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+% \usepackage[chorded]{songs}
+\usepackage[lyric]{songs}
+% \usepackage[slides]{songs}
+
+\title{Budaörsi Ifjúsági Nap - Mise}
+% \author{Donkó István}
+\date{2017. március 18.}
+
+\setlength{\topmargin}{-1.5cm}
+
+\setlength{\headheight}{0cm}
+\setlength{\headsep}{0cm}
+
+\setlength{\oddsidemargin}{-2cm}
+\setlength{\evensidemargin}{-1.3cm}
+
+\setlength{\textwidth}{13cm}
+\setlength{\textheight}{18cm}
+
+\setlength{\songnumwidth}{1cm}
+\setlength{\versenumwidth}{0.5cm}
+% \setlength{\cbarwidth}{0.1cm}
+
+\songcolumns{1}
+
+\begin{document}
+
+  \begin{titlepage}
+    \pagenumbering{gobble}
+    \setlength{\oddsidemargin}{-1.3cm}
+    \vspace*{3cm}
+    \includegraphics[width=11cm]{bin_logo}
+    \vspace*{3cm}
+    {\let\newpage\relax\maketitle}
+  \end{titlepage}
+
+  \pagenumbering{arabic}
+
+  \versesep=12pt plus 3pt minus 5pt
+
+  \begin{songs}{}
+    \begin{intersong*}\section*{Bevonulás}\end{intersong*}
+    \input{songs/jojj-itt-az-ido.tex}
+    
+    \begin{intersong*}\section*{Kyrie}\end{intersong*}
+    \input{mass-songs/uram-irgalmazz-k159.tex}
+    
+%     \begin{intersong*}\section*{Zsoltár}\end{intersong*}
+%     \input{mass-songs/zsoltar.tex}
+    
+    \begin{intersong*}\section*{Felajánlás}\end{intersong*}
+    \input{songs/loyolai-szent-ignac-imaja.tex}
+    
+    \begin{intersong*}\section*{Sanctus}\end{intersong*}
+    \input{mass-songs/szent-vagy-k192.tex}
+    
+    \begin{intersong*}\section*{Agnus Dei}\end{intersong*}
+    \input{mass-songs/isten-baranya-k299.tex}
+    
+    \begin{intersong*}\section*{Áldozás}\end{intersong*}
+    \input{mass-songs/ket-kezemben-k119.tex}
+    \input{songs/vizek-felett.tex}
+    \input{songs/ott-lelegzel-a-fakban.tex}
+    
+    \begin{intersong*}\section*{Kivonulás}\end{intersong*}
+    \input{songs/indulj-es-menj.tex}
+  \end{songs}
+  
+  \newpage\null
+  \pagenumbering{gobble}
+  \vfill\hfill
+  Budaörsi Ifjúsági Nap
+  \newline\null\hfill
+  2017. 03. 18.
+\end{document}

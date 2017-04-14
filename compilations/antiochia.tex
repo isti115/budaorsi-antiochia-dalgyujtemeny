@@ -1,0 +1,78 @@
+\documentclass[a5paper,twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[hungarian]{babel}
+
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\usepackage[bookmarks]{hyperref}
+
+\usepackage[chorded]{songs}
+% \usepackage[lyric]{songs}
+
+\title{Budaörsi Antiochia dalgyűjtemény akkordokkal}
+\author{Benkő Matyi - Donkó István}
+% \date{2017. február 5.}
+
+% \title{Budaörsi Antiochia daloskönyv}
+% \date{2017. február 5.}
+% \author{Készítette Donkó István - Benkő Matyi munkájából kiindulva}
+
+\setlength{\topmargin}{-1.5cm}
+
+\setlength{\headheight}{0cm}
+\setlength{\headsep}{0cm}
+
+\setlength{\oddsidemargin}{-2cm}
+\setlength{\evensidemargin}{-1.3cm}
+
+\setlength{\textwidth}{13cm}
+\setlength{\textheight}{18cm}
+
+\setlength{\songnumwidth}{1cm}
+\setlength{\versenumwidth}{0.5cm}
+% \setlength{\cbarwidth}{0.1cm}
+
+\songcolumns{1}
+
+% \renewcommand{\lyricfont}[1]{\bf#1}
+% \renewcommand{\lyricfont}[1]{\rmfamily\bf#1}
+
+% \usepackage[outline]{contour}
+% \contourlength{0.1pt}
+% \contournumber{10}
+% \renewcommand{\lyricfont}[1][asdf]{\contour{black}{#1}}
+
+\newindex{titleidx}{antiochia_title_index}
+
+\begin{document}
+
+  \begin{titlepage}  
+    \pagenumbering{gobble}
+    \setlength{\oddsidemargin}{-1.3cm}
+
+    \vspace*{0.75cm}
+    \includegraphics[width=11cm]{Logo_07_final}
+%     {\let\newpage\relax\maketitle}
+  \end{titlepage}
+
+  \showindex{Tartalomjegyzék}{titleidx}
+
+  \pagenumbering{arabic}
+
+  \versesep=12pt plus 3pt minus 5pt
+  
+  \begin{songs}{titleidx}
+    \input{songs.tex}
+  \end{songs}
+
+  To be continued...
+  \vfill
+  Benkő Matyitól kapott dalgyűjtemény alapján.
+  
+  Készítette: Donkó István
+  
+  ?Lektorálta: Nobilis Márió
+
+\end{document}

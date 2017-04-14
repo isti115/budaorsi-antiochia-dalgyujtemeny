@@ -1,0 +1,48 @@
+\documentclass[a5paper,twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[hungarian]{babel}
+
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+% \usepackage[chorded]{songs}
+\usepackage[lyric]{songs}
+% \usepackage[slides]{songs}
+
+\title{Budaörsi Ifjúsági Nap - Mise}
+% \author{Donkó István}
+\date{2017. március 18.}
+
+\setlength{\topmargin}{-1.5cm}
+
+\setlength{\headheight}{0cm}
+\setlength{\headsep}{0cm}
+
+% \setlength{\oddsidemargin}{-2cm}
+% \setlength{\evensidemargin}{-1.3cm}
+
+\setlength{\oddsidemargin}{-1.65cm}
+\setlength{\evensidemargin}{-1.66cm}
+
+\setlength{\textwidth}{13cm}
+\setlength{\textheight}{18cm}
+
+\setlength{\songnumwidth}{1cm}
+\setlength{\versenumwidth}{0.5cm}
+% \setlength{\cbarwidth}{0.1cm}
+
+\songcolumns{1}
+
+\begin{document}
+  \pagenumbering{arabic}
+
+  \versesep=12pt plus 3pt minus 5pt
+
+  \begin{songs}{}
+    \input{songs/hus-ver-templom.tex}
+    \input{songs/im-itt-jon-o.tex}
+    \input{songs/hus-ver-templom.tex}
+    \input{songs/im-itt-jon-o.tex}
+  \end{songs}
+\end{document}
