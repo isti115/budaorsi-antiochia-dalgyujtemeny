@@ -18,7 +18,7 @@
 \SetWatermarkScale{0.8}
 \SetWatermarkLightness{0.9}
 
-% \title{Budaörsi Antiochia dalgyűjtemény akkordokkal}
+\title{Budaörsi Antiochia dalgyűjtemény akkordokkal}
 \author{Balics Eszter - Donkó István}
 % \date{2017. február 5.}
 
@@ -31,8 +31,8 @@
 \setlength{\headheight}{0cm}
 \setlength{\headsep}{0cm}
 
-\setlength{\oddsidemargin}{-2cm}
-\setlength{\evensidemargin}{-1.3cm}
+\setlength{\oddsidemargin}{-1.3cm}
+\setlength{\evensidemargin}{-2cm}
 
 \setlength{\textwidth}{13cm}
 \setlength{\textheight}{18cm}
@@ -56,18 +56,15 @@
 \begin{document}
 
   \begin{titlepage}
-    \pagenumbering{gobble}
     \setlength{\oddsidemargin}{-1.3cm}
 
     \vspace*{0.75cm}
     \includegraphics[width=11cm]{Logo_07_final}
-%     {\let\newpage\relax\maketitle}
+
+    \thispagestyle{empty}
   \end{titlepage}
 
-  \setcounter{page}{1}
   \showindex{Tartalomjegyzék}{titleidx}
-
-  \pagenumbering{arabic}
 
   \versesep=12pt plus 3pt minus 5pt
 
@@ -75,14 +72,12 @@
     \input{songs.tex}
   \end{songs}
 
-  \pagenumbering{gobble}
+  \newpage
+  \thispagestyle{empty}
 
   To be continued...
   \vfill
-  % Benkő Matyitól kapott dalgyűjtemény alapján.
-
   Készítette: Balics Eszter és Donkó István
-
   % ?Lektorálta: Nobilis Márió?
 
 \end{document}
