@@ -68,8 +68,21 @@
 
   \versesep=12pt plus 3pt minus 5pt
 
+  \songsection{Antiochiás énekek}
   \begin{songs}{titleidx}
     \input{songs.tex}
+  \end{songs}
+
+  \songsection{Köszöntések}
+  \renewcommand{\thesongnum}{K\arabic{songnum}}
+  \begin{songs}{}
+    \input{songs-extra.tex}
+  \end{songs}
+
+  \songsection{Miseénekek}
+  \renewcommand{\thesongnum}{M\arabic{songnum}}
+  \begin{songs}{}
+    \input{songs-mass.tex}
   \end{songs}
 
   \newpage
