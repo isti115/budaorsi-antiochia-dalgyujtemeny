@@ -13,7 +13,7 @@
 % \usepackage[lyric]{songs}
 
 \usepackage{draftwatermark}
-\SetWatermarkText{2. Minta}
+\SetWatermarkText{3. Minta}
 \SetWatermarkHorCenter{7cm}
 \SetWatermarkScale{0.8}
 \SetWatermarkLightness{0.9}
@@ -64,6 +64,8 @@
     \thispagestyle{empty}
   \end{titlepage}
 
+  \renewcommand{\idxtitlefont}{\sffamily}
+  \renewcommand{\idxlyricfont}{\rmfamily\slshape}
   \showindex{Tartalomjegyzék}{titleidx}
 
   \versesep=12pt plus 3pt minus 5pt
@@ -80,6 +82,8 @@
   \end{songs}
 
   \songsection{Liturgikus énekek}
+  \renewcommand{\thesongnum}{M\arabic{songnum}}
+  \setlength{\songnumwidth}{1.25cm}
   \begin{songs}{}
     \input{songs-mass.tex}
   \end{songs}
@@ -91,7 +95,6 @@
   \vspace*{\fill}
   % \vfill
   Készítette: Balics Eszter és Donkó István
-  2017 .... blablabla
   % ?Lektorálta: Nobilis Márió?
 
 \end{document}
