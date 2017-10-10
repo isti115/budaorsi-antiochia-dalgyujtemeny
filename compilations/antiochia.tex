@@ -41,7 +41,10 @@
 \setlength{\versenumwidth}{0.5cm}
 % \setlength{\cbarwidth}{0.1cm}
 
+\catcode`_=12 % use underscore as regular character
+\renewcommand{\_}[1]{\underline{#1}} % shorter command for adding melismas
 \songcolumns{1}
+\notenames{A}{H}{C}{D}{E}{F}{G}
 
 % \renewcommand{\lyricfont}[1]{\bf#1}
 % \renewcommand{\lyricfont}[1]{\rmfamily\bf#1}
