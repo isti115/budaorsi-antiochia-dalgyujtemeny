@@ -54,7 +54,8 @@
 % \contournumber{10}
 % \renewcommand{\lyricfont}[1][asdf]{\contour{black}{#1}}
 
-\newindex{titleidx}{antiochia_title_index}
+\newindex{songs_title_index}{songs_title_index}
+\newindex{taize_songs_title_index}{taize_songs_title_index}
 
 \begin{document}
 
@@ -69,13 +70,21 @@
 
   \renewcommand{\idxtitlefont}{\sffamily}
   \renewcommand{\idxlyricfont}{\rmfamily\slshape}
-  \showindex{Tartalomjegyzék}{titleidx}
+  % \sepindexesfalse
+  \showindex{Tartalomjegyzék}{songs_title_index}
+  \showindex{Taizé-i énekek}{taize_songs_title_index}
 
   \versesep=12pt plus 3pt minus 5pt
 
   % \songsection{Antiochiás énekek}
-  \begin{songs}{titleidx}
+  \begin{songs}{songs_title_index}
     \input{songs.tex}
+  \end{songs}
+
+  \songsection{Taizéi énekek}
+  \renewcommand{\thesongnum}{T\arabic{songnum}}
+  \begin{songs}{taize_songs_title_index}
+    \input{songs-taize.tex}
   \end{songs}
 
   \songsection{Köszöntések}
@@ -97,7 +106,12 @@
   % To be continued...
   \vspace*{\fill}
   % \vfill
+  1. kiadás - 2017 november
+
+  \vspace{0.3cm}
+
   Készítette: Balics Eszter és Donkó István
+
   Lektorálta: Nobilis Márió
 
 \end{document}

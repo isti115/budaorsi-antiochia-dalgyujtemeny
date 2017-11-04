@@ -1,4 +1,8 @@
-﻿$replacements = @{
+﻿Param(
+  [string]$path
+)
+
+$replacements = @{
   "Á" = "A";
   "É" = "E";
   "Í" = "I";
@@ -22,7 +26,7 @@ function LowerFirst ($title)
   $title.Substring(0, 1).ToLower() + $title.Substring(1)
 }
 
-$originalData = Get-Content -Path "antiochia_title_index.sbx" -Encoding "UTF8"
+$originalData = Get-Content -Path "$path" -Encoding "UTF8"
 $matchedData = $originalData | Select-String "(\\idx(?:alt)?entry\{((.).*?)\}.*)"
 $sortedData = $matchedData | Sort-Object { $_.Matches.Groups[2] }
 
@@ -40,4 +44,4 @@ $sortedData | ForEach-Object {
 
 $output += "\end{idxblock}"
 
-$output | Out-File -FilePath ".\antiochia_title_index_fixed.sbx" -Encoding "UTF8"
+$output | Out-File -FilePath ".\$path-fixed" -Encoding "UTF8"
