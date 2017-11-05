@@ -30,12 +30,13 @@
 
 \setlength{\headheight}{0cm}
 \setlength{\headsep}{0cm}
+\setlength{\footskip}{0.85cm}
 
 \setlength{\oddsidemargin}{-1.5cm}
 \setlength{\evensidemargin}{-1.8cm}
 
 \setlength{\textwidth}{13cm}
-\setlength{\textheight}{18cm}
+\setlength{\textheight}{18.5cm}
 
 \setlength{\songnumwidth}{1.02cm}
 \setlength{\versenumwidth}{0.5cm}
@@ -75,6 +76,10 @@
   \showindex{Taizéi énekek}{taize_songs_title_index}
 
   \versesep=12pt plus 3pt minus 5pt
+
+  \iflyric
+    \baselineadj=2pt plus 1pt minus 1pt
+  \fi
 
   % \songsection{Antiochiás énekek}
   \begin{songs}{songs_title_index}
