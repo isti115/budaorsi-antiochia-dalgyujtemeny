@@ -10,7 +10,23 @@
   \fi
 
   \beginverse\memorize
+    % \newdimen\origiwspc%
+    % \newdimen\origiwstr%
+    \newdimen\origiwshr%
+    % \origiwspc=\fontdimen2\font% original inter word space
+    % \origiwstr=\fontdimen3\font% original inter word stretch
+    \origiwshr=\fontdimen4\font% original inter word shrink
+    % \fontdimen2\font=0.5ex% inter word space
+    % \fontdimen3\font=0.1em% inter word stretch
+    \fontdimen4\font=1em% inter word shrink
+
+    % \spaceskip=\fontdimen2\font plus \fontdimen3\font minus 3\fontdimen4\font
     Nagy \[D]tűz, hatalmas \[F#m]láng, csak egy \[G]szikra az, amitől \[A]kigyullad. \echo{amitől \[A7]kigyullad}
+
+    % \fontdimen2\font=\origiwspc% (original) inter word space
+    % \fontdimen3\font=\origiwstr% (original) inter word stretch
+    \fontdimen4\font=\origiwshr% (original) inter word shrink
+
     \[D]Melegét szórja \[F#m]rád, csak a \[G]kezed kell, hogy oda\[A]ny{\_{ú}}jtsad. \echo{hogy oda\[A7]ny{\_{ú}}jtsad}
   \endverse
 

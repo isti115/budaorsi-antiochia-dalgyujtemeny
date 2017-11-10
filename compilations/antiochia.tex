@@ -9,10 +9,10 @@
 
 \usepackage[bookmarks]{hyperref}
 
-\usepackage[chorded]{songs}
-% \usepackage[lyric]{songs}
+% \usepackage[chorded]{songs}
+\usepackage[lyric]{songs}
 
-\usepackage{draftwatermark}
+\usepackage[nostamp]{draftwatermark}
 \SetWatermarkText{4. Minta}
 \SetWatermarkHorCenter{7cm}
 \SetWatermarkScale{0.8}
@@ -32,10 +32,10 @@
 \setlength{\headsep}{0cm}
 \setlength{\footskip}{0.85cm}
 
-\setlength{\oddsidemargin}{-1.5cm}
+\setlength{\oddsidemargin}{-1cm}
 \setlength{\evensidemargin}{-1.8cm}
 
-\setlength{\textwidth}{13cm}
+\setlength{\textwidth}{12.5cm}
 \setlength{\textheight}{18.5cm}
 
 \setlength{\songnumwidth}{1.02cm}
@@ -88,6 +88,7 @@
 
   \songsection{Taizéi énekek}
   \renewcommand{\thesongnum}{T\arabic{songnum}}
+  \setlength{\songnumwidth}{1.1cm}
   \begin{songs}{taize_songs_title_index}
     \input{songs-taize.tex}
   \end{songs}
@@ -111,7 +112,7 @@
   % To be continued...
   \vspace*{\fill}
   % \vfill
-  1. kiadás - 2017 november
+  0. kiadás (1. mintapéldány) - 2017 november
 
   \vspace{0.3cm}
 
