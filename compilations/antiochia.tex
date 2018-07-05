@@ -9,8 +9,8 @@
 
 \usepackage[bookmarks]{hyperref}
 
-% \usepackage[chorded]{songs}
-\usepackage[lyric]{songs}
+\usepackage[chorded]{songs}
+% \usepackage[lyric]{songs}
 
 \usepackage[nostamp]{draftwatermark}
 \SetWatermarkText{4. Minta}
@@ -64,7 +64,7 @@
     % \setlength{\oddsidemargin}{-1.3cm}
 
     \vspace*{1.3cm}
-    \includegraphics[width=11cm]{Logo_songbook}
+    \includegraphics[width=11cm]{Logo_songbook.png}
 
     \thispagestyle{empty}
   \end{titlepage}
@@ -84,6 +84,8 @@
   % \songsection{Antiochiás énekek}
   \begin{songs}{songs_title_index}
     \input{songs.tex}
+    \setcounter{songnum}{101}
+    \input{songs2.tex}
   \end{songs}
 
   \songsection{Taizéi énekek}
