@@ -13,7 +13,7 @@
 % \usepackage[lyric]{songs}
 % \usepackage[slides]{songs}
 
-\title{Gitáros Mise\\\textit{(2017. november 26.)}}
+\title{Juniális\\\textit{(2018. június 10.)}}
 % \author{Donkó István}
 \date{}
 
@@ -23,8 +23,8 @@
 \setlength{\headsep}{0cm}
 \setlength{\footskip}{0.85cm}
 
-\setlength{\oddsidemargin}{-1.3cm}
-\setlength{\evensidemargin}{-1.8cm}
+\setlength{\oddsidemargin}{-1cm}
+\setlength{\evensidemargin}{-2.1cm}
 
 \setlength{\textwidth}{12.9cm}
 \setlength{\textheight}{18.5cm}
@@ -55,13 +55,15 @@
     \baselineadj=2pt plus 1pt minus 1pt
   \fi
 
-  % \includeonlysongs{46,M10,M20,84,20,56,M30,M40,87,48,97,73,40,92}
-  \includeonlysongs{68}
+  \includeonlysongs{K146,M10,M20,84,55,26,M30,M40,48,97,85,40,73}
 
   \begin{songs}{}
-    \transpose{2}
-
     \input{songs.tex}
+
+    \renewcommand{\thesongnum}{K\arabic{songnum}}
+    \setcounter{songnum}{146}
+    \setlength{\songnumwidth}{1.45cm}
+    \input{songs/menjetek-be-kapuin.tex}
 
     \renewcommand{\thesongnum}{T\arabic{songnum}}
     \setlength{\songnumwidth}{1.1cm}
@@ -81,6 +83,6 @@
   % To be continued...
   \vspace*{\fill}
   % \vfill
-  Budaörs, 2017. november 26.
+  Budaörs, 2018. június 10.
 
 \end{document}

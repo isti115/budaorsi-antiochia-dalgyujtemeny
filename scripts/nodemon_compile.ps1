@@ -3,4 +3,4 @@
  )
 
 $name = (split-path $main -Leaf).Split('.')[0]
-nodemon -e tex --exec pdflatex "-output-directory" "output/$name" "compilations/$name.tex"
+nodemon --ext "tex" --exec pdflatex "-output-directory" "output/$name" "compilations/$name.tex"
