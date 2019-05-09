@@ -73,10 +73,17 @@ h1 {
   vertical-align: middle;
 }
 
-.download span {
+.download div {
   display: inline-block;
 
   vertical-align: middle;
+  font-weight: bold;
 
   font-size: 20px;
+}
+
+
+.download div img {
+  height: 75px;
+  margin-top: 25px;
 }
