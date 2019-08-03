@@ -1,0 +1,70 @@
+\documentclass[a5paper,twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[hungarian]{babel}
+
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\usepackage[chorded]{songs}
+% \usepackage[lyric]{songs}
+% \usepackage[slides]{songs}
+
+\title{2019 - Öröm Útja}
+% \author{Donkó István}
+\date{2019. április 22.}
+
+\setlength{\topmargin}{-1.5cm}
+
+\setlength{\headheight}{0cm}
+\setlength{\headsep}{0cm}
+\setlength{\footskip}{0.85cm}
+
+\setlength{\oddsidemargin}{-1.6cm}
+\setlength{\evensidemargin}{-1.5cm}
+
+% \setlength{\oddsidemargin}{-2.1cm}
+% \setlength{\evensidemargin}{-1cm}
+
+\setlength{\textwidth}{12.9cm}
+\setlength{\textheight}{18.5cm}
+
+\setlength{\songnumwidth}{1.02cm}
+\setlength{\versenumwidth}{0.5cm}
+% \setlength{\cbarwidth}{0.1cm}
+
+\catcode`_=12 % use underscore as regular character
+\renewcommand{\_}[1]{\underline{#1}} % shorter command for adding melismas
+\songcolumns{1}
+\notenames{A}{H}{C}{D}{E}{F}{G}
+
+\begin{document}
+
+  % \begin{titlepage}
+  %   \pagenumbering{gobble}
+  %   \setlength{\oddsidemargin}{-1.6cm}
+  %   \vspace*{6cm}
+  %   {\let\newpage\relax\maketitle}
+  % \end{titlepage}
+
+  \pagenumbering{arabic}
+
+  \versesep=12pt plus 3pt minus 5pt
+
+  \begin{songs}{}
+    % \input{songs/ebredj-ember.tex}
+    \input{songs/koszonom-jezus.tex}
+    \input{songs/mennek-az-asszonyok.tex}
+    \input{songs/nezz-testver-fel.tex}
+    \input{songs/foltamadt-alleluja.tex}
+    \input{songs/indulj-es-menj.tex}
+    \input{songs/beke-napja-kozel.tex}
+    \input{songs/jojj-hivunk-jojj.tex}
+    \songcolumns{2}
+    \input{songs/szentlelek-jojj.tex}
+  \end{songs}
+
+  \pagenumbering{gobble}
+  \input{compilations/2019-orom-utja.txt}
+\end{document}
