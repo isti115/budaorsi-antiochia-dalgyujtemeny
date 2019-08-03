@@ -1,4 +1,4 @@
-\documentclass[a5paper,twoside]{article}
+\documentclass[a4paper,landscape]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
@@ -13,9 +13,7 @@
 \usepackage[lyric]{songs}
 % \usepackage[slides]{songs}
 
-% \title{Temp}
-\title{Gitáros Mise\\\textit{(2018. november 17.)}}
-
+\title{Juniális\\\textit{(2018. június 10.)}}
 % \author{Donkó István}
 \date{}
 
@@ -25,10 +23,8 @@
 \setlength{\headsep}{0cm}
 \setlength{\footskip}{0.85cm}
 
-\setlength{\oddsidemargin}{-1.3cm}
-\setlength{\evensidemargin}{-1.8cm}
-
-\setlength{\textwidth}{12.9cm}
+\setlength{\oddsidemargin}{-2cm}
+\setlength{\textwidth}{28.5cm}
 \setlength{\textheight}{18.5cm}
 
 \setlength{\songnumwidth}{1.02cm}
@@ -37,19 +33,19 @@
 
 \catcode`_=12 % use underscore as regular character
 \renewcommand{\_}[1]{\underline{#1}} % shorter command for adding melismas
-\songcolumns{1}
+\songcolumns{3}
 \notenames{A}{H}{C}{D}{E}{F}{G}
 
 \begin{document}
-  \pagenumbering{arabic}
+  % \pagenumbering{arabic}
 
-  \begin{titlepage}
+  % \begin{titlepage}
     \pagenumbering{gobble}
-    \setlength{\oddsidemargin}{-1.625cm}
+  %   \setlength{\oddsidemargin}{-1.625cm}
 
-    \vspace*{4cm}
-    {\let\newpage\relax\maketitle}
-  \end{titlepage}
+  %   \vspace*{4cm}
+  %   {\let\newpage\relax\maketitle}
+  % \end{titlepage}
 
   \versesep=12pt plus 3pt minus 5pt
 
@@ -57,11 +53,7 @@
     \baselineadj=2pt plus 1pt minus 1pt
   \fi
 
-  % \includeonlysongs{M11,101,56,M11,101,56}
-  % \includeonlysongs{80,M10,55,26,M30,M40,85,40,15}
-  % \includeonlysongs{46,M10,M20,84,20,56,M30,M40,87,48,97,73,40,92}
-  % \includeonlysongs{68}
-  \includeonlysongs{104,104,104,104}
+  \includeonlysongs{80,M11,M20,84,101,14,M30,M40,48,85,73,87,12,97,11}
 
   \begin{songs}{}
     \input{songs.tex}
@@ -73,12 +65,13 @@
 
     \input{songs-mass.tex}
   \end{songs}
-  \newpage
-  \thispagestyle{empty}
 
-  % To be continued...
-  \vspace*{\fill}
-  % \vfill
+  % \newpage
+  % \thispagestyle{empty}
 
-  Budaörs, 2018. november 4.
+  % % To be continued...
+  % \vspace*{\fill}
+  % % \vfill
+  % Budaörs, 2018. június 10.
+
 \end{document}
