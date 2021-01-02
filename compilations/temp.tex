@@ -13,7 +13,7 @@
 \usepackage[lyric]{songs}
 % \usepackage[slides]{songs}
 
-\title{Gitáros mise\\\textit{(2020. november 01.)}}
+\title{Gitáros mise\\\textit{(2021. január 02.)}}
 % \author{Donkó István}
 \date{}
 
@@ -41,13 +41,13 @@
 \begin{document}
   \pagenumbering{arabic}
 
-  \begin{titlepage}
-    \pagenumbering{gobble}
+  % \begin{titlepage}
+  %   \pagenumbering{gobble}
     \setlength{\oddsidemargin}{-1.625cm}
 
-    \vspace*{4cm}
+  %   \vspace*{4cm}
     {\let\newpage\relax\maketitle}
-  \end{titlepage}
+  % \end{titlepage}
 
   \versesep=12pt plus 3pt minus 5pt
 
@@ -58,7 +58,7 @@
   % \includeonlysongs{M11,101,56,M11,101,56}
   % \includeonlysongs{80,M10,55,26,M30,M40,85,40,15}
   % \includeonlysongs{46,M10,M20,84,20,56,M30,M40,87,48,97,73,40,92}
-  \includeonlysongs{6,M10,T11,M20,T101,15,M30,M41,89,85,40}
+  \includeonlysongs{46,M10,M20,T1,T101,24,M30,M41,48,50,73,92}
   % \includeonlysongs{T101}
   % \includeonlysongs{999}
   % \includeonlysongs{999,M41}
@@ -67,6 +67,25 @@
   \begin{songs}{}
     \input{songs.tex}
     \input{songs2.tex}
+
+    % \setcounter{songnum}{999}
+    % \beginsong{Alleluja}[]
+
+    %   \beginchorus
+    %     Alleluja, alleluja…
+    %   \endchorus
+
+    %   \beginverse*
+    %     Készítsétek elő az Úr útját!
+    %     Egyengessétek ösvényét,
+    %     És minden ember meglátja az Üdvözítőt, akit elküld az Isten.
+    %   \endverse
+
+    %   \beginchorus
+    %     Alleluja, alleluja…
+    %   \endchorus
+
+    % \endsong
 
     % \setcounter{songnum}{999}
     % \beginsong{Alleluja}
@@ -101,12 +120,10 @@
     % \setlength{\songnumwidth}{1.25cm}
     \input{songs-mass.tex}
   \end{songs}
-  \newpage
-  \thispagestyle{empty}
-
-  % To be continued...
-  \vspace*{\fill}
-  % \vfill
-  
-  Budaörs, 2020. november 01.
+  % \newpage
+  % \thispagestyle{empty}
+  % % To be continued...
+  % \vspace*{\fill}
+  % % \vfill
+  % Budaörs, 2020. január 02.
 \end{document}
