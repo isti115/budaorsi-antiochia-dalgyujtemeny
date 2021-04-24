@@ -13,21 +13,21 @@
 \usepackage[lyric]{songs}
 % \usepackage[slides]{songs}
 
-\title{Gitáros mise\\\textit{(2021. március 06.)}}
+\title{Gitáros mise\\\textit{(2021. április 10.)}}
 % \author{Donkó István}
 \date{}
 
-\setlength{\topmargin}{-1.5cm}
+\setlength{\topmargin}{-2cm}
 
 \setlength{\headheight}{0cm}
 \setlength{\headsep}{0cm}
 \setlength{\footskip}{0.85cm}
 
-\setlength{\oddsidemargin}{-1.3cm}
-\setlength{\evensidemargin}{-1.8cm}
+\setlength{\oddsidemargin}{-2cm}
+\setlength{\evensidemargin}{-2cm}
 
-\setlength{\textwidth}{12.9cm}
-\setlength{\textheight}{18.5cm}
+\setlength{\textwidth}{13.7cm}
+\setlength{\textheight}{19.25cm}
 
 \setlength{\songnumwidth}{1.02cm}
 \setlength{\versenumwidth}{0.5cm}
@@ -35,21 +35,23 @@
 
 \catcode`_=12 % use underscore as regular character
 \renewcommand{\_}[1]{\underline{#1}} % shorter command for adding melismas
+% \newcommand{\var}[1]{\mbar{\footnotesize $^#1$}{}}
+\newcommand{\var}[1]{\mbar{\footnotesize #1}{}}
 \songcolumns{1}
 \notenames{A}{H}{C}{D}{E}{F}{G}
 
 \begin{document}
   \pagenumbering{arabic}
 
-  \begin{titlepage}
-    \pagenumbering{gobble}
-    \setlength{\oddsidemargin}{-1.625cm}
-
-    \vspace*{4cm}
-    % \vspace{-1.5cm}
-    {\let\newpage\relax\maketitle}
-    % \vspace{-1.5cm}
-  \end{titlepage}
+  % \begin{titlepage}
+  %   \pagenumbering{gobble}
+  %   \setlength{\oddsidemargin}{-1.625cm}
+  %
+  %   \vspace*{4cm}
+  %   % \vspace{-1.5cm}
+  %   {\let\newpage\relax\maketitle}
+  %   % \vspace{-1.5cm}
+  % \end{titlepage}
 
   \versesep=12pt plus 3pt minus 5pt
 
@@ -57,11 +59,18 @@
     \baselineadj=2pt plus 1pt minus 1pt
   \fi
 
+  \begin{center}
+    {\huge Gitáros mise} \\
+    \vspace{0.1cm}
+    {\Large \textit{(2021. április 10.)}}
+  \end{center}
+  \vspace{-0.25cm}
+
   % \includeonlysongs{M11,101,56,M11,101,56}
   % \includeonlysongs{80,M10,55,26,M30,M40,85,40,15}
   % \includeonlysongs{46,M10,M20,84,20,56,M30,M40,87,48,97,73,40,92}
   % \includeonlysongs{6,M10,M20,888,T101,999,26,M30,M40,87,88,85,118}
-  \includeonlysongs{35,M10,888,999,56,M30,M42,111,85,40}
+  \includeonlysongs{58,M19,M20,888,999,24,M30,M40,10,119,29}
   % \includeonlysongs{T101}
   % \includeonlysongs{999}
   % \includeonlysongs{999,M41}
@@ -89,5 +98,5 @@
   % % To be continued...
   % \vspace*{\fill}
   % \vfill
-  % Budaörs, 2021. március 06.
+  % Budaörs, 2021. április 10.
 \end{document}
