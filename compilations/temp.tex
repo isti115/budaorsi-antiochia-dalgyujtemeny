@@ -10,12 +10,15 @@
 \usepackage{multicol}
 \usepackage[bookmarks]{hyperref}
 
-% \usepackage[chorded]{songs}
-\usepackage[lyric]{songs}
+\usepackage{xifthen}
+\newif\ifchordtmp
+
+\usepackage[chorded]{songs}
+% \usepackage[lyric]{songs}
 % \usepackage[slides]{songs}
 
 % \title{RáBalics nászmise\\\textit{(2021. október 9.)}}
-\title{Gitáros mise\\\textit{(2022. április 3.)}}
+\title{Juniális\\\textit{(2022. június 12.)}}
 % \author{Donkó István}
 \date{}
 
@@ -29,7 +32,8 @@
 \setlength{\evensidemargin}{-1.8cm}
 
 \setlength{\textwidth}{13.25cm}
-\setlength{\textheight}{19cm}
+\setlength{\textheight}{18.25cm}
+% \setlength{\textheight}{19cm}
 
 \setlength{\songnumwidth}{1.02cm}
 \setlength{\versenumwidth}{0.5cm}
@@ -37,6 +41,18 @@
 
 \catcode`_=12 % use underscore as regular character
 \renewcommand{\_}[1]{\underline{#1}} % shorter command for adding melismas
+\newcommand{\refrain}[2][]{
+  \beginchorus
+    \ifchorded \chordtmptrue \chordsoff \fi
+      \textit{\textbf{Refrén}}
+      \ifthenelse{\isempty{#1}}{}{\rep{#1}}
+    \ifchordtmp \chordtmpfalse \chordson \fi
+    #2
+    % this empty line below is important!
+
+  \endchorus
+} % command for chorus with optional repetition and additional text / chords
+
 % \newcommand{\var}[1]{\mbar{\footnotesize $^#1$}{}}
 \newcommand{\var}[1]{\mbar{\footnotesize #1}{}}
 \songcolumns{1}
@@ -62,14 +78,14 @@
     \baselineadj=2pt plus 1pt minus 1pt
   \fi
 
-  % \begin{center}
-  %   \vspace*{0cm}
-  %   {\huge Gitáros mise} \\
-  %   \vspace*{0.1cm}
-  %   {\Large \textit{(2022. április 3.)}}
-  %   \vspace{1cm}
-  % \end{center}
-  % \vspace{-0.25cm}
+  \begin{center}
+    \vspace*{2cm}
+    {\huge Juniális} \\
+    \vspace*{0.2cm}
+    {\Large \textit{(2022. június 12.)}}
+    \vspace{3cm}
+  \end{center}
+  \vspace{-0.25cm}
 
   % \begin{center}
   %   % \vspace*{1.5cm}
@@ -87,7 +103,7 @@
   % \includeonlysongs{M11,87,125,56,M31,M42,91,59,T2}
   % \includeonlysongs{76,M10,M20,T12,???,24,M31,M42,68,87,40} % 2022. feb.
   % \includeonlysongs{56,M10,16,T8,24,M30,M41,25,48,4}
-  \includeonlysongs{118,M10,M20,7,T101,89,M30,M41,82,51,36,37,12,23}
+  \includeonlysongs{14,M10,M21,T102,T101,56,M30,M41,91,77,85,73,102}
   % \includeonlysongs{46,M10,M20,M21,T3,7,85,M31,M42,89,71,4}
   % \includeonlysongs{T101}
   % \includeonlysongs{999}
@@ -117,10 +133,10 @@
     \beginsong{Alleluja}\endsong
 
   \end{songs}
-  % \newpage
-  % \thispagestyle{empty}
-  % % To be continued...
-  % \vspace*{\fill}
+  \newpage
+  \thispagestyle{empty}
+  % To be continued...
+  \vspace*{\fill}
   % \vfill
-  % Budaörs, 2021. december 17.
+  Budaörs, 2022. június 12.
 \end{document}
