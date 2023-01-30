@@ -1,36 +1,37 @@
 \documentclass[a5paper,twoside]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
-\usepackage[T1]{fontenc}
 \usepackage[hungarian]{babel}
 
 \usepackage{graphicx}
-\graphicspath{ {images/} }
+\graphicspath{{images/}}
 
 \usepackage[bookmarks]{hyperref}
+
+\usepackage{multicol}
+
+% \usepackage[nostamp]{draftwatermark}
+\usepackage{draftwatermark}
+\SetWatermarkText{2.5. Minta}
+\SetWatermarkHorCenter{7cm}
+\SetWatermarkScale{0.8}
+\SetWatermarkLightness{0.75}
 
 \usepackage[chorded]{songs}
 % \usepackage[lyric]{songs}
 
-\usepackage[nostamp]{draftwatermark}
-\SetWatermarkText{4. Minta}
-\SetWatermarkHorCenter{7cm}
-\SetWatermarkScale{0.8}
-\SetWatermarkLightness{0.9}
-
-\title{Budaörsi Antiochia dalgyűjtemény akkordokkal}
-\author{Balics Eszter - Donkó István}
+% \title{Ifjúsági daloskönyv - Budaörs}
+% \author{Balics Eszter - Donkó István}
 % \date{2017. február 5.}
-
-% \title{Budaörsi Antiochia daloskönyv}
-% \date{2017. február 5.}
-% \author{Készítette Donkó István - Benkő Matyi munkájából kiindulva}
 
 \setlength{\topmargin}{-1.5cm}
 
 \setlength{\headheight}{0cm}
 \setlength{\headsep}{0cm}
 \setlength{\footskip}{0.85cm}
+
+% The A5 paper size is defined to be 14.8 cm wide and 21 cm high
+% The spiral takes up about 0.6 cm on the inner side
+% The remaining width is 14.2 cm
+% The default left margin is 2.5cm
 
 \setlength{\oddsidemargin}{-1cm}
 \setlength{\evensidemargin}{-2.1cm}
@@ -40,20 +41,20 @@
 
 \setlength{\songnumwidth}{1.02cm}
 \setlength{\versenumwidth}{0.5cm}
-% \setlength{\cbarwidth}{0.1cm}
 
-\catcode`_=12 % use underscore as regular character
-\renewcommand{\_}[1]{\underline{#1}} % shorter command for adding melismas
+% Treat underscore as a regular character
+\catcode`_=12
+
+% Command for adding melismas
+\renewcommand{\_}[1]{\underline{#1}}
+
+% Command for adding variations to repetitions
+\newcommand{\var}[1]{\mbar{\footnotesize #1}{}}
+
 \songcolumns{1}
 \notenames{A}{H}{C}{D}{E}{F}{G}
 
-% \renewcommand{\lyricfont}[1]{\bf#1}
-% \renewcommand{\lyricfont}[1]{\rmfamily\bf#1}
-
-% \usepackage[outline]{contour}
-% \contourlength{0.1pt}
-% \contournumber{10}
-% \renewcommand{\lyricfont}[1][asdf]{\contour{black}{#1}}
+\input{chords.tex}
 
 \newindex{songs_title_index}{songs_title_index}
 \newindex{taize_songs_title_index}{taize_songs_title_index}
@@ -61,12 +62,12 @@
 \begin{document}
 
   \begin{titlepage}
+    \thispagestyle{empty}
     % \setlength{\oddsidemargin}{-1.3cm}
 
     \vspace*{1.3cm}
     \includegraphics[width=11cm]{Logo_songbook.png}
 
-    \thispagestyle{empty}
   \end{titlepage}
 
   \renewcommand{\idxtitlefont}{\sffamily}
@@ -81,7 +82,8 @@
     \baselineadj=2pt plus 1pt minus 1pt
   \fi
 
-  % \songsection{Antiochiás énekek}
+  % TODO: This might be needed for the PDF version to have proper chapters.
+  % \songsection{Dalok}
   \begin{songs}{songs_title_index}
     \input{songs.tex}
     \input{songs2.tex}
@@ -102,17 +104,31 @@
     \input{songs-mass.tex}
   \end{songs}
 
-  \newpage\null\newpage
+  % Make sure that the booklet will have an even number of pages
+  \ifodd \value{page}
+    \newpage
+    \thispagestyle{empty}
+    \null
+  \else \fi
+
+  \newpage
   \thispagestyle{empty}
 
-  % To be continued...
   \vspace*{\fill}
-  % \vfill
-  1. kiadás - Budaörs, 2017. november
+  \setlength{\parindent}{0pt}
+
+  2. kiadás - Budaörs, <év>. <hónap>
 
   \vspace{0.3cm}
 
-  Készítette: Balics Eszter, Nobilis Márió és Donkó István
+  Készítették:
+  \vspace{-0.3cm}
+  \begin{multicols}{3}
+    Balics Eszter \\
+    Donkó István \\
+    Korcsma Eszter \\
+    Nobilis Márió \\
+  \end{multicols}
 
   Nepomuki Szent János Antiochia
 
