@@ -8,6 +8,9 @@
 
 \usepackage{multicol}
 
+\usepackage{xifthen}
+\newif\ifchordtmp
+
 % \usepackage[nostamp]{draftwatermark}
 \usepackage{draftwatermark}
 \SetWatermarkText{2.5. Minta}
@@ -50,6 +53,18 @@
 
 % Command for adding variations to repetitions
 \newcommand{\var}[1]{\mbar{\footnotesize #1}{}}
+
+\newcommand{\refrain}[2][]{
+  \beginchorus
+    \ifchorded \chordtmptrue \chordsoff \fi
+      \textit{\textbf{Refrén}}
+      \ifthenelse{\isempty{#1}}{}{\rep{#1}}
+    \ifchordtmp \chordtmpfalse \chordson \fi
+    #2
+    % NOTE: The empty line below is important!
+
+  \endchorus
+} % command for chorus with optional repetition and additional text / chords
 
 \songcolumns{1}
 \notenames{A}{H}{C}{D}{E}{F}{G}
@@ -105,11 +120,11 @@
   \end{songs}
 
   % Make sure that the booklet will have an even number of pages
-  \ifodd \value{page}
+  \ifthenelse{\isodd{\value{page}}}{
     \newpage
     \thispagestyle{empty}
     \null
-  \else \fi
+  }{}
 
   \newpage
   \thispagestyle{empty}
